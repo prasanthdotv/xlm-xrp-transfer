@@ -1,0 +1,36 @@
+{
+  "name": "xlm-xrp-payment",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm-run-all build server",
+    "server": "node ./dist-server/bin/www",
+    "transpile": "babel ./src --out-dir dist-server --copy-files",
+    "clean": "rimraf dist-server",
+    "build": "npm-run-all clean transpile",
+    "dev": "nodemon --exec babel-node src/bin/www.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-validation": "^3.0.8",
+    "log4js": "^6.4.1",
+    "mongoose": "^6.2.4",
+    "stellar-sdk": "^10.0.1",
+    "xrpl": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5"
+  }
+}

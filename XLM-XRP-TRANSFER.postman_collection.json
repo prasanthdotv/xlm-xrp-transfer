@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "e4d0da5c-be3d-4f3d-951b-413da46811f8",
+		"name": "XLM-XRP-TRANSFER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create XLM Admin Account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/account/xlm",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"xlm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create XRP Admin Account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/account/xrp",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"xrp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Stellar(XLM)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"1\",\r\n    \"address\":\"GDJRAWGDJI3CHHXALFP5N27CAKEWYXQXIT4CAXGOH3PTY5X2L3M2EE7K\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/transfer/xlm",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"transfer",
+						"xlm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Ripple(XRP)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"1\",\r\n    \"address\":\"rJCq9tpeTtdQuSzJtxtgGAmN9EhTazhvi1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/transfer/xrp",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"transfer",
+						"xrp"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:3000"
+		}
+	]
+}

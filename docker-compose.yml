@@ -1,0 +1,19 @@
+version: "3"
+services:
+  api:
+    container_name: "xlm-transfer-api"
+    build:
+      context: ./
+      dockerfile: dev.Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/app/
+    command: "npm run dev"
+    env_file:
+      - .env
+  mongo:
+    container_name: "xlm-transfer-mongo"
+    image: "mongo:4"
+    ports:
+      - "27020:27017"
